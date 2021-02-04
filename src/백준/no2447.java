@@ -7,12 +7,13 @@ public class no2447 {
     static char array[][];
 
     public static void star (int x, int y, int n) {
+    	System.out.println("x = " + x + ", y = " + y + ", n = " + n);
         if (n == 1){
             array[x][y] = '*';
             return;
         }
         
-        int m = n/3; //하위 칸으로 줄임.
+        int m = n/3; //하위 칸으로 줄임. 
         
         for (int i=0; i<3; i++) {
             for (int j=0; j<3; j++) {
