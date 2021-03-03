@@ -20,6 +20,7 @@ public class no1003_2 {
 				zero = temp;
 			}
 			System.out.println(zero + " " + one);
+			//commit È®ÀÎ¿ë
 		}
 	}
 
