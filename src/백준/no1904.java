@@ -5,23 +5,25 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class no1904 {
-
-	public static int fac(int num) {
-		if(num <1) return 0;
-		else return fac(num-1)+num;
-	}
+	static int[] array = new int [1000001];
+	
+//	public static int fac(int num) {
+//		if(array[num] != (0|1|2)) array[num] = (fac(num-1)+ fac(num-2))%15746;
+//		return array[num];
+//	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(bfr.readLine());
-		
-		if(N==1) {
-			System.out.println(1);
-			return;
+		array[0] = 1;
+		array[1] = 2;
+		array[2] = 3;
+		for(int i=3; i<=N; i++) {
+			array[i] = array[i-1] + array[i-2];
+			array[i] %= 15746;
+				
 		}
-
-		System.out.println(fac(N-2) + 2);
-		
+		System.out.println(array[N-1]);
 		
 	}
 
