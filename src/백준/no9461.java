@@ -14,14 +14,15 @@ public class no9461 {
 				continue;
 			}
 	
-			int array[] = new int[a];
-			array[0] =1;
-			array[1] =1;
-			array[2] =1;
+			Long array[] = new Long[a];
+			array[0] =(long) 1;
+			array[1] =(long)1;
+			array[2] =(long)1;
 			
 			for(int j=3; j<a; j++) {
 				array[j] = array[j-3] + array[j-2];
 			}
+			
 			System.out.println(array[a-1]);
 		}
 
